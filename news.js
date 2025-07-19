@@ -5,10 +5,10 @@ const client = new OpenAI({
 });
 
 let lastArticleGrabbed;
-let index = 0;
 let firstIteration = true;
 
 async function getNews() {
+  let index = 0;
   // The URL of the API endpoint.
   // This should be the same endpoint your Node.js server (from the first example) is hosting.
   const apiUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + newsAPIKey;
