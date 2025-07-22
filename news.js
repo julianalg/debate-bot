@@ -65,4 +65,9 @@ async function getNews() {
   }
 }
 
-module.exports = { getNews };
+// simple getter
+function getLastArticle() {
+  return lastArticleGrabbed;
+}
+
+module.exports = { getNews, getLastArticle };
