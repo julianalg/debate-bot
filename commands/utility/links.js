@@ -46,7 +46,7 @@ module.exports = {
 	// Disable embeds by setting allowedMentions and flags
 	interaction.editReply({
 	  content: `Here are some links related to the last article:\n${
-		json.organic_results?.map(r => `${r.title}(${r.link})`).join('\n') || 'No links found.'
+		json.organic_results?.map(r => `[${r.title}](${r.link})`).join('\n') || 'No links found.'
 	  }`,
 	  allowedMentions: { parse: [] },
 	  flags: 4096 // Suppress Embeds
